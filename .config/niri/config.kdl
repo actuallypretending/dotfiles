@@ -112,7 +112,7 @@ input {
 layout {
     background-color "transparent"
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 6
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -172,7 +172,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#ffc87f"
 
         // Color of the ring on inactive monitors.
         //
