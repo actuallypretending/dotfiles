@@ -9,6 +9,10 @@ fi
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -25,16 +29,3 @@ unset rc
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
 . "$HOME/.cargo/env"
-
-export PATH="$HOME/tools/flutter/bin:$PATH"
-export PATH
-export EDITOR=nvim
-
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias rebash='source ~/.bashrc'
-
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519personal
-fi
-
